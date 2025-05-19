@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    width: 98%;
+    height: auto;
+    margin: auto;
+    max-height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    z-index: 80;
+}
+
+/* Company Logo Section */
+nav span#logoSpan {
+    width: 25%;
+}
+
+nav span#logoSpan a {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+nav span#logoSpan img {
+    width: 50%;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+
+/* Right Side section with the main links and the login register buttons */
+nav div#navRightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    transition: left 0.2s ease-in-out;
+}
+
+nav div#navRightSide ul#mainNavLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67%;
+    list-style: none;
+}
+
+nav div#navRightSide ul#mainNavLinks a.navLink {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif, serif;
+    margin: 0 20px;
+    transition: all 0.15s ease-in-out;
+}
+
+nav div#navRightSide ul#mainNavLinks a.activeNavLink {
+    color: rgb(62, 64, 150);
+}
+
+nav div#navRightSide ul#mainNavLinks a.navLink:not(.activeNavLink):hover,
+nav div#navRightSide ul#mainNavLinks a.navLink:not(.activeNavLink):focus {
+    color: rgb(0, 0, 0);
+}
+
+
+nav div#navRightSide span#accounting {
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav div#navRightSide span#accounting a {
+    font-family: "Open Sans", sans-serif, serif;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    margin: 0 10px;
+}
+
+nav div#navRightSide span#accounting a#loginButton {
+    background-color: rgb(62, 64, 150);
+    color: rgb(255, 255, 255);
+    padding: 7px;
+    border-radius: 10px;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Hamburger Menu button with functionalities */
+nav div#hamburgerDiv {
+    display: none;
+    z-index: 100;
+}
+
+nav div#hamburgerDiv label#hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+nav div#hamburgerDiv label#hamburgerMenu span {
+    height: 5px;
+    width: 30px;
+    height: 5px;
+    background-color: rgb(62, 64, 150);
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+nav div#hamburgerDiv label#hamburgerMenu span:first-child {
+    width: 20px;
+    left: 20px;
+}
+
+nav div#hamburgerDiv label#hamburgerMenu span:nth-child(2) {
+    width: 35px;
+    left: 0px;
+}
+
+nav div#hamburgerDiv label#hamburgerMenu span:last-child {
+    width: 30px;
+    left: 10px;
+}
+
+nav input[type='checkbox']:checked ~ div#hamburgerDiv label#hamburgerMenu span:first-child{
+    transform-origin: left;
+    transform: rotateZ(40deg);
+    width: 30px;
+    left: 0;
+}
+nav input[type='checkbox']:checked ~ div#hamburgerDiv label#hamburgerMenu span:nth-child(2){
+    visibility: hidden;
+}
+nav input[type='checkbox']:checked ~ div#hamburgerDiv label#hamburgerMenu span:last-child{
+    transform-origin: left;
+    transform: rotateZ(-40deg);
+    width: 30px;
+    left: 0;
+}
+nav input[type='checkbox']:checked ~ div#navRightSide{
+    left: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    nav {
+        height: 10vh;
+        padding: 10px 5px;
+    }
+    nav span#logoSpan {
+        width: 55%;
+    }
+    nav span#logoSpan img{
+        width: 100%;
+    }
+    nav div#hamburgerDiv{
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav div#navRightSide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        position: fixed;
+        left: 100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        z-index: 90;
+    }
+    nav div#navRightSide ul#mainNavLinks{
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    nav div#navRightSide ul#mainNavLinks a.navLink{
+        font-size: 1.4rem;
+    }
+    nav div#navRightSide span#accounting{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
