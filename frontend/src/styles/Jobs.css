@@ -1,0 +1,216 @@
+/* Jobs.css */
+
+/* Base Typography and Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fb;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+.jobs-header {
+  background-color: #120F3F;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.jobs-header h1 {
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Search Bar */
+.jobs-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.jobs-search input,
+.jobs-search button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.jobs-search input {
+  width: 250px;
+}
+
+.jobs-search button {
+  background-color: #7B61FF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.jobs-search button:hover {
+  background-color: #634bdb;
+}
+
+/* Main Layout */
+.jobs-container {
+  max-width: 1280px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.jobs-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Sidebar Filters */
+.jobs-sidebar {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.jobs-sidebar h2,
+.jobs-sidebar h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.jobs-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.jobs-sidebar li {
+  padding: 0.25rem 0;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.jobs-sidebar li:hover {
+  color: #7B61FF;
+}
+
+/* Job Cards */
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job-card,
+.job-card-content {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.job-card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.job-card-content p {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/* Upload Notice Box */
+.notice {
+  background-color: #eef2ff;
+  border: 1px solid #d0dfff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.notice-upload {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.notice .icon {
+  color: #7B61FF;
+}
+
+/* Subscribe Section */
+.jobs-subscribe {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subscribe-box h3 span,
+.popular-companies h4 span {
+  color: #7B61FF;
+}
+
+.subscribe-input {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  border: 1px solid #d0dfff;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #f8faff;
+}
+
+.subscribe-input input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  outline: none;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.subscribe-button {
+  margin-top: 1rem;
+  background-color: #7B61FF;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.subscribe-button:hover {
+  background-color: #634bdb;
+}
+
+/* Popular Companies List */
+.popular-companies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popular-companies li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
