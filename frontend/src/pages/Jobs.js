@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -8,6 +8,12 @@ import '../styles/Jobs.css';
 import { Mail, Upload } from "lucide-react";
 
 const Jobs = () => {
+  const [showFilters, setShowFilters] = useState(false);
+
+  const toggleFilters = () => {
+    setShowFilters(!showFilters);
+  };
+
   return (
     <div className="jobs-page">
       <Header activePage="jobs" />
@@ -19,11 +25,17 @@ const Jobs = () => {
           <Input placeholder="Location" defaultValue="Chicago, IL" className="location-input" />
           <Button className="search-button">Search</Button>
         </div>
+
+        <div className="mobile-filter-toggle">
+          <Button onClick={toggleFilters}>
+            {showFilters ? "Hide Filters" : "Show Filters"}
+          </Button>
+        </div>
       </div>
 
       <div className="jobs-container">
         <div className="jobs-content">
-          <div className="jobs-sidebar">
+          <div className={`jobs-sidebar ${showFilters ? 'show' : ''}`}>
             <h2>Filters</h2>
             <div>
               <h3>JOB TYPE</h3>
