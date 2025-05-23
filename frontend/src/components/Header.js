@@ -1,21 +1,21 @@
-import React, { act, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import logo from '../resources/zidioconnectlogo.png';
 import '../styles/header.css';
 
 const Header = (props) => {
-    const [activePage, setActivePage] = useState(props.activePage);
+    const [activePage, ] = useState(props.activePage);
     useEffect(() => {
         const navLinks = document.querySelectorAll(".navLink");
         navLinks.forEach((link) => {
-            if (link.textContent.toLowerCase() == activePage.toLowerCase()) {
+            if (link.textContent.toLowerCase() === activePage.toLowerCase()) {
                 link.classList.add("activeNavLink");
                 console.log(link.textContent);
             } else {
                 link.classList.remove("activeNavLink");
             }
         });
-    }, []);
+    });
 
     return (
         <nav>

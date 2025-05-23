@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
 import Internships from "./pages/Internships";
 import Compete from "./pages/Compete";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import CompleteUserDetails from "./pages/CompleteUserDetails";
 
 const Routing = ()=>{
 
@@ -14,6 +17,9 @@ const Routing = ()=>{
                 <Route path="/jobs" element={<Jobs />} />
                 <Route path="/internships" element={<Internships />} />
                 <Route path="/compete" element={<Compete />} />
+                <Route path='/login' element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/complete-registration/" element={<CompleteUserDetails />} />
             </Routes>
         </BRouter>
     );
