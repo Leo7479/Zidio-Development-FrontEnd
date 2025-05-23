@@ -117,12 +117,6 @@ body {
   color: #7B61FF;
 }
 
-@media (max-width: 767px) {
-  .jobs-sidebar {
-    display: none;
-  }
-}
-
 /* Job Cards */
 .jobs-list {
   display: flex;
@@ -236,4 +230,35 @@ body {
 .popular-companies li {
   margin-bottom: 0.5rem;
   color: #555;
+}
+
+/* ----------------------------- */
+/* ✅ Mobile Filter Toggle Add-on */
+/* ----------------------------- */
+
+/* Toggle Button for Filters */
+.mobile-filter-toggle {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-filter-toggle {
+    display: none;
+  }
+}
+
+/* Sidebar visibility on mobile */
+@media (max-width: 767px) {
+  .jobs-sidebar {
+    display: none;
+  }
+
+  .jobs-sidebar.show {
+    display: block;
+    position: relative;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
 }
