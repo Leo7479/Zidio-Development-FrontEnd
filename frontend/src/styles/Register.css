@@ -11,7 +11,7 @@ div.registerBody {
     height: 100vh;
     display: grid;
     place-items: center;
-    background: conic-gradient(rgb(62,64,153), rgb(62,64,153),white, rgb(153,62,64), rgb(62,64,153));
+    /* background: conic-gradient(rgb(62,64,153), rgb(62,64,153),white, rgb(153,62,64), rgb(62,64,153)); */
 }
 
 div.registerBody div.registerForm {

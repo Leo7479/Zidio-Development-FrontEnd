@@ -51,11 +51,13 @@ const Login = () => {
                         <div className="directLoginDetails">
                             <span id="loginEmail">
                                 <Mail className="loginIcon" />
-                                <Input type="email" id="email" name="email" required className="loginInput" placeholder="Ex: john.doe@gmail.com"/>
+                                <Input type="email" id="email" name="email" required className="loginInput" placeholder=""/>
+                                <label className="inputDivText">Enter Your Email</label>
                             </span>
                             <span id="loginPassword">
                                 <LockKeyhole className="loginIcon" />
-                                <Input type={passwordVisible?"text":"password"} id="password" name="password" required className="loginInput" placeholder="Your Password"/>
+                                <Input type={passwordVisible?"text":"password"} id="password" name="password" required className="loginInput" placeholder=""/>
+                                <label className="inputDivText">Password</label>
                                 <input type="checkbox" id="showPassword" onChange={showPassword} hidden/>
                                 <label id="eyeButton" htmlFor="showPassword">
                                     {
