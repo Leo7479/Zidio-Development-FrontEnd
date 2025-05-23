@@ -269,21 +269,23 @@ button#loginButton:hover svg {
 
 @media (max-width: 768px) {
     div.loginForm {
+        width:95%;
         flex-direction: column;
-        height: 95%;
+        height:95%;
     }
     div.loginForm div.leftSide{
         width: 100%;
-        height: 30%;
+        height: 20%;
         border-radius: 20px;
-        background-position:center;
     }
 
     div.loginForm div.rightSide {
         width: 100%;
         border-radius: 20px;
-        padding: 15px;
+        justify-content: flex-start;
         align-items: center;
+        height: 80%;
+        overflow-y: auto;
     }
 
     div.loginForm div.rightSide span.back {
@@ -296,13 +298,13 @@ button#loginButton:hover svg {
         padding: 15px 0;
     }
 
-    div.socialMediaLoginDetails {
-        flex-direction: column;
-        gap: 10px;
+    div.loginBody div.loginForm div.rightSide div.mainContent img{
+        display: none;
     }
 
-    .socialLogin {
-        width: 100%;
+    div.socialMediaLoginDetails {
+        flex-direction: row;
+        gap: 10px;
     }
 
     span.horizontalSeperation {

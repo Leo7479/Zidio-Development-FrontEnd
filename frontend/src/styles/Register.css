@@ -242,29 +242,29 @@ span.createAccount{
 }
 
 @media (max-width: 768px) {
-    div.registerBody {
-        padding: 20px;
-        height: 100vh;
-    }
-
     div.registerBody div.registerForm {
         flex-direction: column;
-        width: 100%;
+        width: 95%;
         height: 95%;
     }
 
     div.registerBody div.registerForm div.leftSide {
         width: 100%;
-        height: 30%;
+        height: 20%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
 
     div.registerBody div.registerForm div.rightSide {
         width: 100%;
+        height: 80%;
         border-radius: 0 0 20px 20px;
+        justify-content: flex-start;
         align-items: center;
         padding: 20px 10px;
+        overflow-y: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     div.registerBody div.registerForm span.back{
         width: 100%;
@@ -276,9 +276,16 @@ span.createAccount{
 
     div.registerBody div.registerForm div.rightSide div.mainContent {
         align-items: center;
+        justify-content: flex-start;
+    }
+
+    div.registerBody div.registerForm div.rightSide div.mainContent span.welcome{
+        width: 100%;
+        text-align: start;
     }
 
     div.directRegisterDetails {
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -287,7 +294,7 @@ span.createAccount{
     }
 
     div.registerForm div.rightSide div.mainContent div.socialMediaLoginDetails {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
