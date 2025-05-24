@@ -7,7 +7,7 @@ import Compete from "./pages/Compete";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CompleteUserDetails from "./pages/CompleteUserDetails";
-
+import Error404Page from "./pages/Error";
 const Routing = ()=>{
 
     return(
@@ -20,6 +20,7 @@ const Routing = ()=>{
                 <Route path='/login' element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/complete-registration/" element={<CompleteUserDetails />} />
+                <Route path="*" element={<Error404Page />} />
             </Routes>
         </BRouter>
     );
