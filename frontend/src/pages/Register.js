@@ -58,7 +58,7 @@ const Register = () => {
                                     }
                                 </label>
                             </span>
-                            <button id="registerButton">Register<ArrowRight /></button>
+                            <button id="registerButton" className="shine">Register<ArrowRight /></button>
                         </div>
                         <span className="createAccount">
                             Already have an account?

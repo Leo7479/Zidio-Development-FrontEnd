@@ -46,7 +46,7 @@ const Header = (props) => {
 
                 {/* Login options */}
                 <span id="accounting">
-                    <Link to="/login" id="loginButton">Login</Link>
+                    <Link to="/login" id="loginButton" className="shine">Login</Link>
                     <Link to="/register" id="registerButton">Register</Link>
                 </span>
 

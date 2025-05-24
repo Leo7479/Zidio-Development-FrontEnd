@@ -193,30 +193,6 @@ button#registerButton {
     align-items: center;
 }
 
-button#registerButton::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 10px;
-    height: 100%;
-    background-color: rgb(230, 230, 230);
-    transform: skew(-30deg);
-    transition: all 0.25s ease-in-out;
-    visibility: hidden;
-}
-
-button#registerButton svg {
-    position: relative;
-    left: 5px;
-}
-
-button#registerButton:focus::after,
-button#registerButton:hover::after {
-    visibility: visible;
-    left: 110%;
-}
-
 button#registerButton:focus svg,
 button#registerButton:hover svg {
     animation-name: jump-right;

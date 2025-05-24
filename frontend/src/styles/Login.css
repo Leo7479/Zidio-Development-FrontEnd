@@ -249,7 +249,11 @@ button#loginButton {
     align-items: center;
 }
 
-button#loginButton::after{
+.shine{
+    overflow: hidden;
+    position: relative;
+}
+.shine::after{
     content: '';
     position: absolute;
     top: 0;
@@ -262,8 +266,8 @@ button#loginButton::after{
     visibility: hidden;
 }
 
-button#loginButton:focus::after,
-button#loginButton:hover::after{
+.shine:focus::after,
+.shine:hover::after{
     visibility: visible;
     left: 110%;
 }

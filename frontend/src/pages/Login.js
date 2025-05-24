@@ -74,7 +74,7 @@ const Login = () => {
                                     <Link to="/recovery">Forgot Password?</Link>
                                 </span>
                             </div>
-                            <button id="loginButton">Log In<ArrowRight /></button>
+                            <button id="loginButton" className="shine">Log In<ArrowRight /></button>
                         </div>
                         <span className="createAccount">
                             Don't have an account?

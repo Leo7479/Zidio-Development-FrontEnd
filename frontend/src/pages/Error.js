@@ -18,7 +18,7 @@ const Error404Page = () => {
           <div className="error-text">
             <h1 id="error-title" className="bounce">404</h1>
             <h2>Oops! Page not Available.</h2>
-            <button><Link to="/">Find More <ArrowRight /></Link></button>
+            <button className="shine"><Link to="/">Find More <ArrowRight /></Link></button>
           </div>
         </main>
       </div>
