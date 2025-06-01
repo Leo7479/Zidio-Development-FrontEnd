@@ -1,9 +1,10 @@
 /* General Container */
 .home-container {
-  font-family: sans-serif;
-  background-color: #f6f6ff;
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFFFF; /* Clean white background for the main container */
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1200px; /* Set a max width for the container */
 }
 
 /* Hero Section */
@@ -14,6 +15,11 @@
   padding: 4rem 2rem;
   flex-wrap: wrap;
   gap: 2rem;
+  color: #333; /* Darker text for contrast */
+  border-radius: 10px; /* Rounded corners for hero section */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #4A6CF7; /* Primary color for the hero section */
+  color: white; /* Text color for the hero section */
 }
 
 .hero-left {
@@ -29,7 +35,6 @@
 .hero-left p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #555;
 }
 
 .search-bar {
@@ -41,34 +46,41 @@
 
 .search-bar input {
   padding: 0.8rem;
-  flex: 1 1 200px;
+  flex: 1 1 200px; /* Allow input to grow but have a minimum width */
+  max-width: 300px; /* Set a maximum width for consistency */
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #fff; /* Highlight border on focus */
 }
 
 .search-bar button {
   padding: 0.8rem 1.5rem;
-  background-color: #4a6cf7;
-  color: white;
+  background-color: #FF6F61; /* Accent color for button */
+  color: white; /* Button text color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for hover */
 }
 
 .search-bar button:hover {
-  background-color: #3a5bcf; /* Darker shade on hover */
+  background-color: #e55b54; /* Darker shade on hover */
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
 .suggestions {
   font-size: 0.9rem;
-  color: #777;
+  color: #fff; /* White text for suggestions */
 }
 
 .suggestion-link {
   background: none;
   border: none;
-  color: #4a6cf7;
+  color: #FF6F61; /* Accent color for links */
   cursor: pointer;
   padding: 0;
 }
@@ -89,9 +101,11 @@
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  background-color: #fff;
+  background-color: #F9F9F9; /* Light background for stats */
   flex-wrap: wrap;
   gap: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 10px; /* Rounded corners */
 }
 
 .stat-item {
@@ -99,6 +113,14 @@
   align-items: center;
   gap: 1rem;
   flex: 1 1 200px;
+  padding: 1rem; /* Add padding to stat items */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.2s ease; /* Added transition for hover */
+}
+
+.stat-item:hover {
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
 .stat-item img {
@@ -109,58 +131,70 @@
 /* Categories Section */
 .categories {
   padding: 2rem;
+  background-color: #ffffff; /* White background for categories */
 }
 
 .categories h2 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #333; /* Darker text color */
 }
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Four items per row */
   gap: 1rem;
 }
 
 .category-item {
   text-align: center;
-  background: #fff;
+  background: #F9F9F9; /* Light background for category items */
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease; /* Added transition for hover */
+  height: 150px; /* Fixed height for consistency */
 }
 
 .category-item:hover {
-  transform: scale(1.03);
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .category-item img {
-  width: 40px;
-  height: 40px;
+  width: 50px; /* Slightly larger icon */
+  height: 50px;
   margin-bottom: 0.5rem;
 }
 
 /* Featured Jobs Section */
 .featured-jobs {
   padding: 2rem;
+  background-color: #F1F1F1; /* Light grey background for featured jobs */
 }
 
 .featured-jobs h2 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #333; /* Darker text color */
 }
 
 .job-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #FFFFFF; /* White background for job cards */
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 10px;
   flex-wrap: wrap;
   gap: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease; /* Added transition for hover */
+  height: 100px; /* Fixed height for consistency */
+}
+
+.job-card:hover {
+  transform: scale(1.02); /* Scale effect on hover */
 }
 
 .job-image img {
@@ -176,16 +210,17 @@
 
 .job-card button {
   padding: 0.5rem 1rem;
-  background-color: #4a6cf7;
-  color: white;
+  background-color: #4A6CF7; /* Primary button color */
+  color: white; /* Button text color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for hover */
 }
 
 .job-card button:hover {
-  background-color: #3a5bcf; /* Darker shade on hover */
+  background-color: #3A5BCF; /* Darker shade on hover */
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
 /* Global Section Spacing */
@@ -193,21 +228,48 @@ section {
   margin-bottom: 2rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
   }
 
   .search-bar {
     flex-direction: column;
+    width: 100%; /* Make search bar full width */
+  }
+
+  .search-bar input {
+    max-width: 100%; /* Input fields take full width */
+    padding: 0.5rem; /* Reduce padding for mobile */
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+
+  .search-bar button {
+    padding: 0.5rem 1rem; /* Adjust button padding */
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on medium screens */
+  }
+
+  .stat-item {
+    flex: 1 1 100%; /* Stack items vertically on smaller screens */
+    margin-bottom: 1rem; /* Add space between items */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
   }
 
   .job-card {
     flex-direction: column;
     align-items: flex-start;
+    height: auto; /* Allow height to adjust automatically */
   }
 
   .job-info {
@@ -221,16 +283,15 @@ section {
     margin-top: 1rem;
   }
 
-  .stat-item {
-    justify-content: center;
-    text-align: center;
+  .category-grid {
+    grid-template-columns: repeat(1, 1fr); /* One item per row on small screens */
   }
 
   .hero-left h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
   }
 
   .hero-left p {
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* Adjust paragraph size for smaller screens */
   }
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/Home.css';
+
 
 const Home = () => {
   const [featuredJobs, setFeaturedJobs] = useState([]);
@@ -71,7 +73,7 @@ const Home = () => {
         <section className="hero">
           <div className="hero-left">
             <h1>Find a job that suits your interest & skills.</h1>
-            
+           
             <div className="search-bar">
               <input 
                 type="text" 
@@ -130,7 +132,7 @@ const Home = () => {
 
         {/* Categories Section */}
         <section className="categories">
-          <h2>Popular category</h2>
+          <h2>Popular Categories</h2>
           <div className="category-grid">
             {categories.map((cat, idx) => (
               <div key={idx} className="category-item">
@@ -152,7 +154,7 @@ const Home = () => {
               </div>
               <div className="job-info">
                 <h3>{job.title}</h3>
-                <p>{job.company} · {job.type} · {job.location}</p>
+                <p>{job.company} · {job.location}</p>
                 <p>{job.salary}</p>
                 <p>{job.timeRemaining}</p>
               </div>
@@ -161,6 +163,7 @@ const Home = () => {
           ))}
         </section>
       </main>
+       <Footer /> {/* Add Footer here */}
     </div>
   );
 };
