@@ -1,0 +1,14 @@
+/* Footer.css */
+.footer {
+  background-color: #4A6CF7; /* Match the primary color */
+  color: white; /* White text color */
+  padding: 1rem 2rem; /* Padding for spacing */
+  text-align: center; /* Center the text */
+  position: relative; /* Positioning for fixed footer if needed */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+}
